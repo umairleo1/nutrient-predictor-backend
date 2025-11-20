@@ -1,8 +1,12 @@
-# Python
+# Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
 *$py.class
+
+# C extensions
 *.so
+
+# Distribution / packaging
 .Python
 build/
 develop-eggs/
@@ -16,9 +20,34 @@ parts/
 sdist/
 var/
 wheels/
+pip-wheel-metadata/
+share/python-wheels/
 *.egg-info/
 .installed.cfg
 *.egg
+MANIFEST
+
+# PyInstaller
+*.manifest
+*.spec
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
 
 # Virtual environments
 venv/
@@ -26,15 +55,23 @@ env/
 ENV/
 .env
 .venv
+.ENV
+.env.local
+.env.production
+.env.staging
+.env.development
 
-# IDEs
+# IDEs and editors
 .vscode/
 .idea/
 *.swp
 *.swo
 *~
+.spyderproject
+.spyproject
+.ropeproject
 
-# OS
+# OS generated files
 .DS_Store
 .DS_Store?
 ._*
@@ -43,32 +80,65 @@ ENV/
 ehthumbs.db
 Thumbs.db
 
-# Logs
+# Logs and databases
 *.log
-logs/
+*.sql
+*.sqlite
+*.db
 
-# FastAPI
+# FastAPI specific
 .pytest_cache/
-.coverage
 htmlcov/
 
-# Model files (uncomment if models become too large)
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# pyenv
+.python-version
+
+# pipenv
+Pipfile.lock
+
+# PEP 582
+__pypackages__/
+
+# Celery beat schedule file
+celerybeat-schedule
+
+# SageMath parsed files
+*.sage.py
+
+# Spyder project settings
+.spyderproject
+.spyproject
+
+# Rope project settings
+.ropeproject
+
+# mkdocs documentation
+/site
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Pyre type checker
+.pyre/
+
+# Model files (included for deployment - comment out if too large)
 # *.pkl
 # *.joblib
 # *.h5
 # *.hdf5
 # *.onnx
 
-# Data files
+# Data files (raw datasets excluded)
 *.csv
+*.tsv
 *.parquet
-# *.json (commented to allow model_metadata.json)
-
-# Environment variables
-.env.local
-.env.production
-.env.staging
-
-# Cache
-.cache/
-*.pyc
+data/
+datasets/
+# Allow model metadata
+!model_metadata.json
+!saved_models/model_metadata.json
