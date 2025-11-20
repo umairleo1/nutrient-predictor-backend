@@ -52,17 +52,17 @@ logs/
 .coverage
 htmlcov/
 
-# Model files (if large)
-*.pkl
-*.joblib
-*.h5
-*.hdf5
-*.onnx
+# Model files (uncomment if models become too large)
+# *.pkl
+# *.joblib
+# *.h5
+# *.hdf5
+# *.onnx
 
 # Data files
 *.csv
-*.json
 *.parquet
+# *.json (commented to allow model_metadata.json)
 
 # Environment variables
 .env.local
